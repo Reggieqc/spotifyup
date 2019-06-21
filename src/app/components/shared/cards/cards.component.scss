@@ -1,0 +1,5 @@
+.body-container{
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(98px, 1fr));
+}

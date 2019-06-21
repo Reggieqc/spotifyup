@@ -1,0 +1,63 @@
+@import 'variables';
+nav {
+    padding: 0  20px ;
+    background: $dark-color;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    z-index: 3;
+
+    .navbar-brand {
+        display: none;
+    }
+    
+    ul {
+        width: 100%;
+        
+        .unloged {
+            padding: 0.6em 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    ul > ul { 
+        padding: 0.6em 0;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .img-profile {
+        border-radius: 50%;
+    }
+
+    @media only screen and (min-width:800px) {
+        padding: 0  10px ;
+        flex-direction: column;
+        min-height: 100vh;
+        left: 0;
+        top: 0;
+        bottom: unset;
+        max-width: 55px;
+
+        .navbar-brand {
+            height: 73px;
+            display: flex;
+            align-items: center;
+        }
+
+        ul {
+            width: auto;
+        }
+
+        ul > ul {
+            padding: unset;
+            display: block;
+        }
+        
+    }
+}

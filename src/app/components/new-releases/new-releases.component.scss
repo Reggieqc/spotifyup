@@ -1,0 +1,12 @@
+@import 'variables';
+
+.p-description {
+    color: $white;
+}
+
+.h2-title {
+    
+    @media only screen and (min-width:800px) {
+        margin-bottom: 0;
+    }
+}

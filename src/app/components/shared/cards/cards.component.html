@@ -1,0 +1,14 @@
+<div class="body-container">
+  <div  (click)="visitArtist(item)"
+        *ngFor="let item of items"
+        class="song-module"
+    >
+    <div class="cover-module">
+      <img [src]="item.images | noimage" alt="">
+    </div>
+    <div class="info-module">
+      <p >{{item.name | summary:16 }}</p>
+      <strong *ngFor="let artist of item.artists">{{artist.name}}</strong>
+    </div>
+  </div>
+</div>

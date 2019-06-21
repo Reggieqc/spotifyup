@@ -1,0 +1,84 @@
+<section>
+    <div class="header-container">
+        <img class="background-img" src="assets/imgs/create-cover-header.png" alt="">
+        <img class="shadow-gradient" src="assets/imgs/gradient-shadow-bottom.svg" alt="">
+        <span class="black-tag">feature</span>
+        <h2 class="h2-title">Create</h2>
+        <p class="p-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, unde! Odit provident itaque nesciunt debitis!</p>
+    </div>
+    <div class="body-container">
+        <form #f="ngForm" class="grid-container" (ngSubmit)="save(f.value)">
+            <div class="form-controls">
+                <div class="form-group">
+                    <input #imageUrl="ngModel" ngModel name="imageUrl" type="text" id="imageUrl" url required>
+                    <label for="imageUrl">Image URL</label>
+                    <div class="alert" *ngIf="imageUrl.touched && imageUrl.invalid">
+                        <div *ngIf="imageUrl.errors.required">* Image url is required</div>
+                        <div *ngIf="imageUrl.errors.url">Please enter a valid URL.</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input #maingSong="ngModel" ngModel name="mainsong" id="maingSong" type="text" required>
+                    <label for="mainSong">Main Song</label>
+                    <div class="alert" *ngIf="maingSong.touched && maingSong.invalid">* Main song is required</div>
+                </div>
+                <div class="form-group">
+                    <input #title="ngModel" required ngModel name="title" id="title" type="text">
+                    <label for="title">Title</label>
+                    <!-- Le asigno ngModel al tempate variable para poder saber si el input fue tocado  -->
+                    <div class="alert" *ngIf="title.touched && title.invalid">* Title is required</div>
+                </div>
+                <div class="form-group">
+                    <input #artist="ngModel" ngModel name="artist" id="artist" type="text" required>
+                    <label for="artist">Artist</label>
+                    <div class="alert" *ngIf="artist.touched && artist.invalid">* Artist is required</div>
+                </div>
+                <div class="form-group">
+                    <input #year="ngModel" ngModel name="year" id="year" type="text" [min]="0" required>
+                    <label for="artist">Year</label>
+                    <div class="alert" *ngIf="year.touched && year.invalid">
+                        <div *ngIf="year.errors.required">* Year is required</div>
+                        <div *ngIf="year.errors.min">Year should be 0 or higher</div>
+                    </div>
+                </div>
+            </div>
+            <div class="preview-container">
+                <div class="song-module">
+                    <div class="cover-module">
+                        <img *ngIf="!imageUrl.value" src="assets/imgs/noimage.jpg" alt=""/>
+                        <img [src]="imageUrl.value" alt="">
+                    </div>
+                    <div class="info-module">
+                        <p *ngIf="!maingSong.value">Placeholder text</p>
+                        <p>{{ maingSong.value | summary:15 }}</p>
+                        <strong *ngIf="!title.value">Placeholder</strong>
+                        <strong >{{title.value}}</strong>
+                    </div>
+                </div>
+                <div class="info-artist">
+                    <h3 *ngIf="!artist.value">Artist placeholder</h3>
+                    <h3>{{artist.value}}</h3>
+                    <p *ngIf="!year.value">0000</p>
+                    <p>{{year.value}}</p>
+                    <button 
+                        class="btn-primary"
+                        [disabled]="!f.valid"
+                    >save</button>
+                </div>
+            </div>
+        </form>
+        <h3>Albums collection</h3>
+        <div class="albums-created">
+            <div *ngFor="let album of albumsCreated$ | async" class="song-module">
+                <p class="year">{{album.year}}</p>
+                <div class="cover-module">
+                    <img [src]="album.imageUrl" alt="">
+                </div>
+                <div class="info-module">
+                    <p>{{album.title | summary:15 }}</p>
+                    <strong>{{album.artist}}</strong>
+                </div>
+            </div>        
+        </div>
+    </div>
+</section>

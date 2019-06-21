@@ -1,0 +1,46 @@
+/*-------------------------------
+		0.1.-VARIABLES
+--------------------------------*/
+
+
+/*----------- Fonts -------------*/
+
+@font-face {
+    font-family: 'Google Sans';
+    font-weight: normal;
+    src: url('/assets/fonts/GoogleSans-Regular.ttf') format('ttf'), /* Modern Browsers */
+}
+
+@font-face {
+    font-family: 'Google Sans';
+    font-weight: bold;
+    src: url('/assets/fonts/GoogleSans-Bold.ttf') format('ttf'), /* Modern Browsers */
+}
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500|Nunito:300,400,600,700,800|Quicksand:300,400,500,700');
+$primary-font:'Nunito',
+sans-serif;
+$secondary-font: 'Quicksand',
+sans-serif;
+$tertiary-font: 'Montserrat',
+sans-serif;
+$fourth-font: 'Google Sans',
+sans-serif;
+$light :300;
+$regular:400;
+$medium: 500;
+$bold: 700;
+
+/*----------- Colors -------------*/
+
+$primary-color:#ff0039;
+$secondary-color: #2ad398;
+$tertiary-color: #5774be;
+$font-color:#494e57;
+$white: white;
+$dark-color:#121218;
+$darker-color:#0f0f13;
+$form-color: #868686;
+$danger-color:#d60000;
+$main-background-color:#1a1b20;
+$border-radius: 3px;

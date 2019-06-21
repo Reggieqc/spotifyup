@@ -1,0 +1,16 @@
+{
+  "name": "spotify-be",
+  "version": "1.0.0",
+  "description": "Backend to fetch spotify tokens.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Reggie Quiroz",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4",
+    "get-spotify-client-credentials": "^1.0.0",
+    "request": "^2.88.0"
+  }
+}

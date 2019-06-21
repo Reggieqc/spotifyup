@@ -1,0 +1,126 @@
+/*-------------------------------
+		0.-CSS RESET
+--------------------------------*/
+
+html,
+body {
+    min-height: 100vh;
+    font-size: calc(10px + 2vmin);
+}
+
+html * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Google Sans', 'Quicksand';
+    font-weight: normal;
+}
+
+body {
+    background: $main-background-color;
+}
+
+.h2-title {
+    font-family: $fourth-font;
+    font-size: 3em;
+    color: $white;
+    font-weight: $bold;
+    margin-bottom: 0.3em;
+    z-index: 1;
+    position: relative;
+    text-indent: -3px;    
+}
+
+.h3-subtitle {
+    @extend .h2-title;
+    font-size: 2.7em;
+    margin-top: -0.55em;
+    margin-bottom: 0.2em;
+    
+    @media only screen and (min-width:800px) {
+        margin-top: -0.65em;   
+    }
+}
+
+h4 {
+    font-family: $fourth-font;
+    color: $white;
+    font-size: 0.55em;
+}
+
+p {
+    font-family: $primary-font;
+    color: $font-color;
+}
+
+.p-description {
+    margin-bottom: 1.8em;
+    font-size: 0.8em;
+    max-width: 100%;
+    
+    @media only screen and (min-width:800px) {
+        max-width: 450px;
+        font-size: 0.5em;
+    }
+}
+
+ul, li {
+    list-style: none;
+}
+
+button {
+    border: 0;
+    outline: none;
+    box-shadow: unset;
+}
+
+label {
+    color: $form-color;
+    font-family: $fourth-font;
+    font-size: 0.7em;
+
+    @media only screen and (min-width:800px) {
+        font-size: 0.5em;    
+    }
+}
+
+input {
+    background: transparent;
+    border: 0;
+    outline: none;
+    color: white;
+}
+
+.hidden-xs {
+    display: none;
+}
+
+.visible-md {
+    display: block;
+}
+
+.visible-md-fx {
+    display: flex;
+}
+
+.visible-xs {
+    display: block;
+}
+
+@media only screen and (min-width:800px) {
+    .hidden-xs {
+        display: block;
+    }
+
+    .visible-md {
+        display: none;
+    }
+    
+    .visible-xs {
+        display: none;
+    }
+
+    .visible-md-fx{
+        display: none;
+    }
+}

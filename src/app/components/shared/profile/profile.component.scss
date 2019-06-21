@@ -1,0 +1,115 @@
+@import 'variables';
+.profile-container {
+    min-width: 300px;
+    max-width: 350px;
+    color: $font-color;
+    background-color: $dark-color;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    z-index: 3;
+    border-radius: 5px;
+    h3 {
+        font-family: $fourth-font;
+    }
+    p {
+        font-family: $primary-font;
+        font-size: 0.5em;
+    }
+    .avatar {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        border: 3px solid $white;
+        margin-top: -75px;
+        background: $dark-color;
+        margin-bottom: 20px;
+        position: relative;
+        .state {
+            position: absolute;
+            bottom: 0;
+            right: 15px;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            border: 3px solid $white;
+            background: $primary-color;
+        }
+        img {
+            width: 100%;
+            max-height: 100%;
+            object-fit: cover;
+        }
+    }
+    .profile-info {
+        color: $font-color;
+        width: 80%;
+        p {
+            color: inherit;
+        }
+    }
+    .stadistics {
+        display: flex;
+        width: 50%;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 30px;
+        span {
+            color: $primary-color;
+            font-family: $tertiary-font;
+            font-size: 0.6em;
+        }
+        .followers {
+            border-right: 1px solid $font-color;
+            padding-right: 1em;
+        }
+        .listeners {
+            padding-left: 1em;
+        }
+    }
+    .recommended-container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 80%;
+        margin-top: 50px;
+        &>h4 {
+            font-family: $fourth-font;
+            letter-spacing: 0.05em;
+            font-size: 0.6em;
+            font-weight: $regular;
+            margin-bottom: 25px;
+        }
+        .artist-recommended {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            .img-thumbnail {
+                width: 45px;
+                height: 45px;
+                margin-right: 20px;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+            h4 {
+                font-family: $secondary-font;
+                font-weight: $medium;
+                letter-spacing: 0;
+                font-size: 0.5em;
+            }
+            p {
+                text-align: left;
+                text-transform: capitalize;
+                font-family: $primary-font;
+                font-weight: $light;
+                font-size: 0.4em;
+                margin-top: 2px;
+            }
+        }
+    }
+}

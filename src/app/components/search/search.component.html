@@ -1,0 +1,22 @@
+<section>
+  <div class="header-container">
+    <img class="background-img" src="assets/imgs/new-releases-cover.jpg" alt="">
+    <img class="shadow-gradient" src="assets/imgs/gradient-shadow-bottom.svg" alt="">
+    <span class="black-tag">feature</span>
+    <h2 class="h2-title">Search</h2>
+    <p class="p-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, unde!
+      Odit provident itaque nesciunt debitis!</p>
+    <input #artistName type="text" placeholder="Search artist..." (keyup)="searchArtist(artistName.value)">
+  </div>
+  <app-cards [items]="artists"></app-cards>
+  <!-- <div class="body-container">
+    <div *ngFor="let artist of artists" class="song-module">
+      <div class="cover-module">
+        <img [src]="artist.images | noimage" alt="">
+      </div>
+      <div class="info-module">
+        <p>{{artist.name | summary}}</p>
+      </div>
+    </div>
+  </div> -->
+</section>

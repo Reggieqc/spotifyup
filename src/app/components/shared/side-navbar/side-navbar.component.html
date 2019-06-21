@@ -1,0 +1,42 @@
+<nav>
+    <a routerLink='/home' class="navbar-brand"><img src="assets/imgs/spotify-logo.svg" width=35 height=35 alt="app logo"></a>
+    <ul>
+        <!-- <li>
+            <a routerLink="/home"><img src="assets/imgs/icons/user-icon.svg" width=25 height=25 alt="user icon">home</a>
+        </li> -->
+        <ng-template #anonymousUser>
+            <li class="unloged">
+                <a routerLink="/login">
+                    <img src="assets/imgs/icons/login-icon.svg" width=28 alt="user icon">
+                </a>
+            </li>
+        </ng-template>
+        <ul *ngIf="auth.user$ | async as user; else anonymousUser">
+            <li>
+                <a routerLink="/search">
+                    <img src="assets/imgs/icons/search-icon.svg" width=25 alt="user icon">
+                </a>
+            </li>
+            <li>
+                <a routerLink="/create">
+                    <img src="assets/imgs/icons/create-icon.svg" width=27 alt="user icon">
+                </a>
+            </li>
+            <li>
+                <a routerLink="/new-releases">
+                    <img src="assets/imgs/icons/new-releases-icon.svg" width=26 alt="user icon">
+                </a>
+            </li>
+            <li (click)="logout()" class="hidden-xs">
+                <a>
+                    <img src="assets/imgs/icons/logout-icon.svg" width=28 alt="user icon">
+                </a>
+            </li>
+            <li>
+                <a>
+                    <img class="img-profile" src="{{user.photoURL}}" width=27 alt="">
+                </a>
+            </li>
+        </ul>
+    </ul>
+</nav>

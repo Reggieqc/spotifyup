@@ -1,0 +1,73 @@
+<section>
+    <div class="header-container">
+        <img class="background-img" [src]="artist.images | noimage" alt="">
+        <img class="shadow-gradient" src="assets/imgs/gradient-shadow-bottom.svg" alt="">
+        <span class="black-tag">{{artist.type}} <img src="assets/imgs/icons/checked-icon.svg" width="15" height="15" alt=""></span>
+        <h2 class="h2-title">{{artist.name}}</h2>
+        <button class="btn-primary">play <img src="assets/imgs/icons/play-icon.svg" width="15" height="15" alt=""></button>
+    </div>
+    <!-- <div class="body-container">
+        <div class="profile-container visible-md-fx">
+            <div class="avatar">
+                <img [src]="artist.images | noimage" alt="">
+                <div class="state"></div>
+            </div>
+            <div class="profile-info">
+                <h3>{{artist.name}}</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse, rem!</p>
+            </div>
+            <div class="stadistics">
+                <div class="followers">
+                    <span>182</span>
+                    <p>followers</p>
+                </div>
+                <div class="listeners">
+                    <span>182</span>
+                    <p>listeners</p>
+                </div>
+            </div>
+            <div class="recommended-container">
+                <h4>Recommend</h4>
+                <div class="artist-recommended">
+                    <div class="img-thumbnail">
+                        <img src="assets/imgs/artist-recommended.png" alt="">
+                    </div>
+                    <div class="artis-info">
+                        <h4>Blink 182</h4>
+                        <p>artist</p>
+                    </div>
+                </div>
+                <div class="artist-recommended">
+                    <div class="img-thumbnail">
+                        <img src="assets/imgs/artist-recommended.png" alt="">
+                    </div>
+                    <div class="artis-info">
+                        <h4>Queen</h4>
+                        <p>artist</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="playlist-container">
+            <div *ngFor="let album of albums" class="individual-album-module">
+                <div class="album-preview">
+                    <div class="album-thumbnail">
+                        <img [src]="album.images | noimage" alt="">
+                    </div>
+                    <div class="album-info-artist">
+                        <p class="release-date">Release: {{album.release_date}}</p>
+                        <div class="album-play">
+                            <img src="assets/imgs/icons/pause-icon.svg" width=30 alt="">
+                            <div>
+                                <p>{{album.name}}</p>
+                                <p>{{album.total_tracks}} songs, 1hr 54m</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <img class="gradient-background" src="assets/imgs/gradient-shadow-bottom-album.png" alt="">
+                <img class="img-album" [src]="album.images | noimage" alt="">
+            </div>        
+        </div>
+    </div> -->
+</section>
